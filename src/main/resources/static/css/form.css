@@ -1,0 +1,181 @@
+.navForm a{
+    background: #000000;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+section div{
+    width: 80%;
+    margin: auto;
+    height: auto;
+    margin-top: 40px;
+    margin-bottom:40px;
+    background: #ffffff;
+}
+body #divBlok{
+    margin: 0px;
+    overflow:scroll;
+    width: 100%;
+
+}
+
+section div h2{
+    text-align: center;
+}
+
+section div p{
+    text-align: center;
+}
+
+#blok{
+    display: flex;
+    flex-direction: column;
+}
+
+#Person{
+    width: 20px;
+}
+
+#Company{
+    width: 20px;
+}
+
+#divPerson{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    background-color: #dddddd;
+}
+#divCompany{
+    margin: auto;
+    background-color: #dddddd;
+}
+
+form{
+    padding: 20px;
+    max-width: 100%;
+}
+
+fieldset{
+    padding: 20px;
+}
+
+td{
+    padding-bottom: 20px;
+    width: 10%;
+    margin: auto;
+    font-size: 18px;
+}
+
+td input{
+    width: 100%;
+}
+
+.text{
+    width: 5%;
+}
+
+.entity{
+    border: 1px solid;
+}
+
+@media screen and (min-width:601px) and (max-width: 1100px){
+    td{
+        font-size: 17px;
+    }
+    section div{
+        width: 90%;
+        height: 90%;
+    }
+    section form{
+        height: 110%;
+    }
+
+    section fieldset input{
+        height: 30px;
+        width: 100px;
+        font-size: 18px;
+    }
+
+    section td input{
+        height: 25px;
+        width: 80%;
+        margin-right: 20%;
+    }
+
+    #divCompany{
+        height: 30px;
+    }
+
+    #divPerson{
+        height: 30px;
+    }
+
+    section form fieldset{
+        height: 70%;
+    }
+
+    section{
+        width: 80%;
+    }
+    fieldset{
+        padding:0px;
+    }
+    #blok{
+        padding: 20px;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    td{
+        width: 100px;
+        font-size: 13px;
+    }
+    section div{
+        height: auto;
+        width:90%;
+    }
+    section{
+        width: 100%;
+    }
+
+    #divPerson{
+        width: 70%;
+    }
+
+    #divCompany{
+        width: 70%;
+    }
+
+    .entity table{
+        width: 100%;
+    }
+
+    section fieldset tr input{
+        width:90%;
+        margin-right: 20%;
+    }
+
+    #divPerson{
+        width: 100%;
+    }
+
+    #divCompany{
+        width: 100%;
+    }
+}
+
+

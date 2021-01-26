@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org>">
+
+<head>
+    <title>Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/CSS/style.css" th:href="@{/css/style.css}" rel="stylesheet" type="text/css" />
+    <link href="CSS/form.css" th:href="@{/css/form.css}" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    <script th:src="@{/js/gummySlider.js}" type="text/javascript" src="JS/gummySlider.js"></script>
+    <script th:src="@{/js/form.js}" type="text/javascript" src="JS/form.js"></script>
+</head>
+
+
+<body>
+<header>
+    <div class="header">
+        <div class="logo">
+            <h2>Site name</h2>
+            <p>Slogan</p>
+        </div>
+        <div class="contact">
+            <p><img th:src="@{/images/phone.jpg}" src="images/phone.jpg" alt="iconPhone">123 456 789</p>
+        </div>
+    </div>
+    <nav>
+        <div class="navHome"><a th:href="@{~/}" ref="main">Home</a></div>
+        <div class="navForm"><a href="form">Form</a></div>
+        <div class="strona3"><a href="strona3">Link 3</a></div>
+        <div class="navGallery"><a href="gallery">Gallery</a></div>
+        <div class="navLogin"><a href="login">Logout</a></div>
+    </nav>
+</header>
+
+<div class="javaScript">
+    <div class="slider">
+        <div class="slider-inner">
+            <div class="slide active"><img th:src="@{/images/slider/background1.jpg}" src="pictures/slider/background1.jpg" alt="zdjecie1"></div>
+            <div class="slide"><img th:src="@{/images/slider/background2.jpg}" src="pictures/slider/background2.jpg" alt="zdjecie2"/></div>
+            <div class="slide"><img th:src="@{/images/slider/background3.jpg}" src="pictures/slider/background3.jpg" alt="zdjecie3"/></div>
+            <div class="slide"><img th:src="@{/images/slider/background4.jpg}" src="pictures/slider/background4.jpg" alt="zdjecie4"/></div>
+            <div class="slide"><img th:src="@{/images/slider/background5.jpg}" src="pictures/slider/background5.jpg" alt="zdjecie5"/></div>
+            <div class="slide"><img th:src="@{/images/slider/background6.jpg}" src="pictures/slider/background6.jpg" alt="zdjecie6"/></div>
+            <div class="slide"><img th:src="@{/images/slider/background7.jpg}" src="pictures/slider/background7.jpeg" alt="zdjecie7"/></div>
+            <div class="slide"><img th:src="@{/images/slider/background8.jpg}" src="pictures/slider/background8.png" alt="zdjecie8"/></div>
+        </div>
+
+        <nav class="slider-nav">
+            <div class="active"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </nav>
+    </div>
+</div>
+<section>
+
+    <div id="divLogin">
+
+        <form action="#" method="get">
+            <fieldset>
+                <table>
+                    <tr>
+                        <td class="text">Name and surname:</td>
+                        <td><input type="text" id="name" placeholder="Jan Kowalski" pattern="[A-Z]{1}[a-z]{2,12} [A-Z]{1}[a-z]{2,18}" title="Enter your name and surname"><br /></td>
+                    </tr>
+                    <tr>
+                        <td class="text">Payment card number:</td>
+                        <td><input type="text" id="cardNr" placeholder="****************" pattern="^[1-9][0-9]{15}$" title="Enter payment card number (16 digits)"><br /></td>
+                    </tr>
+                    <tr>
+                        <td class="text">Expiration date: </td>
+                        <td><input type="text" id="expDate" placeholder="10/20" pattern="^(1[0-9]|0[1-9])\/[0-9]{2}$" title='Enter expiration date'><br /></td>
+                    </tr>
+                    <tr>
+                        <td class="text">Subject: </td>
+                        <td>
+                            <div style="width: 100%;margin: auto;background-color: #dddddd;">
+                                <div id="divPerson">Person <input type="radio" id="Person" name="subject"></div>
+                                <div id="divCompany">Company <input type="radio" id="Company" name="subject"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text">CVV code: </td>
+                        <td><input type="text" id="cvv" placeholder="***" pattern="[0-9]{3}" title="Enter CVV code on the back of your card"><br /></td>
+                    </tr>
+                </table>
+                <button onclick="dodaj()">Submit</button>
+                <button onclick="pokaz()">Show my cart</button>
+                <button onclick="usun()">Delete all</button>
+            </fieldset>
+            <h2>Available payment cards</h2>
+            <fieldset>
+                <div id="blok"></div>
+
+            </fieldset>
+        </form>
+
+
+
+    </div>
+</section>
+
+<footer>
+    &copy;BG
+    <a href="../../resources/templates/main.html/resources/static/main.html">About</a>
+    <a href="">Contact</a>
+    <a href="">Cookies</a>
+
+</footer>
+</body></html>

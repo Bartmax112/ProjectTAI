@@ -1,19 +1,99 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head th:insert="fragments.html :: headerfiles"></head>
+<html lang=en xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Site for guests</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet" type="text/css"/>
+    <link href="../../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    <script th:src="@{/js/gummySlider.js}"  type="text/javascript" src="../../static/js/gummySlider.js "></script>
+
+</head>
+
 <body>
-<header th:insert="fragments.html :: nav"></header>
-<!-- Page content goes here -->
-<div class="container">
-    <div class="jumbotron">
-        <h1 class="display-4">Hello, Spring Boot Security!</h1>
-        <p class="lead">This is the home page of our web application. Anyone can access it, even if they have not signed in.</p>
-        <hr class="my-4">
-        <p>Using this example, you will become more familiar with Spring Security concepts:)</p>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="https://spring.io/projects/spring-security" role="button">Learn more about Spring Security</a>
-        </p>
+<header>
+    <div class="header">
+        <div class="logo">
+            <h2>Site name</h2>
+            <p>Slogan</p>
+        </div>
+        <div class="contact">
+            <p><img th:src="@{/images/phone.jpg}" alt="iconPhone">123 456 789</p>
+        </div>
+    </div>
+    <nav>
+        <div class="navHome"><a  href="#" th:href="@{/user/index}">Home</a></div>
+        <div class="navForm"><a th:href="@{~/profile/form}">Form</a></div>
+        <div class="strona3"><a href="strona3">Link 3</a></div>
+        <div class="navGallery"><a href="gallery">Gallery</a></div>
+        <div class="navLogin"><a href="#" th:href="@{~/profile/form}">Logout</a></div>
+    </nav>
+</header>
+
+<div class="javaScript">
+    <div class="slider">
+        <div class="slider-inner">
+            <div class="slide active"><img th:src="@{/images/slider/background1.jpg}" src="pictures/slider/background1.jpg" alt="zdjecie1"></div>
+            <div class="slide"><img th:src="@{/images/slider/background2.jpg}" src="pictures/slider/background2.jpg" alt="zdjecie2"/></div>
+            <div class="slide"><img th:src="@{/images/slider/background3.jpg}" src="pictures/slider/background3.jpg" alt="zdjecie3"/></div>
+            <div class="slide"><img th:src="@{/images/slider/background4.jpg}" src="pictures/slider/background4.jpg" alt="zdjecie4"/></div>
+            <div class="slide"><img th:src="@{/images/slider/background5.jpg}" src="pictures/slider/background5.jpg" alt="zdjecie5"/></div>
+            <div class="slide"><img th:src="@{/images/slider/background6.jpg}" src="pictures/slider/background6.jpg" alt="zdjecie6"/></div>
+            <div class="slide"><img th:src="@{/images/slider/background7.jpg}" src="pictures/slider/background7.jpeg" alt="zdjecie7"/></div>
+            <div class="slide"><img th:src="@{/images/slider/background8.jpg}" src="pictures/slider/background8.png" alt="zdjecie8"/></div>
+        </div>
+
+        <nav class="slider-nav">
+            <div class="active"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </nav>
     </div>
 </div>
-</body>
-</html>
+<section>
+    <div class="block1">
+        <h3>
+            <img th:src="@{/images/circle.jpg}" src="icons/circle.png" alt="iconLeft">
+            Title1</h3>
+        <p><img th:src="@{/images/rozdzial1.jpg}"  src="pictures/obraz2.JPG" alt="obraz2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum maximus magna, sed viverra dolor posuere eu. Mauris in mauris ac risus tempor feugiat id sit amet magna. Pellentesque at magna libero. Suspendisse leo dui, facilisis a metus vitae, condimentum mattis risus. Nunc porttitor leo nec euismod eleifend. Pellentesque dignissim lacus nunc, vitae dignissim nisi molestie vitae. Nullam sodales tincidunt nulla, vel fringilla enim facilisis non.</p>
+
+    </div>
+    <div class="block2">
+        <h3><img th:src="@{/images/circle.jpg}" src="icons/circle.png" alt="iconRight">Title2</h3>
+        <p><img th:src="@{/images/rozdzial2.jpg}" src="images/obraz3.JPG" alt="obraz3">Ut pulvinar elementum semper. Mauris sed dui tortor. Nulla convallis augue vel ligula convallis, in scelerisque risus imperdiet. Fusce nec quam ex. Nam nunc odio, venenatis a turpis bibendum, tristique faucibus ligula. Etiam sodales, purus vulputate ultrices egestas, lorem velit convallis lorem, ac viverra tellus est quis tortor. Praesent nec dictum leo, in mollis lectus. Donec hendrerit mauris vel ipsum scelerisque lacinia. Praesent interdum sodales purus in lacinia.</p>
+
+    </div>
+
+    <div class="block3">
+        <h3>
+            <img th:src="@{/images/circle.jpg}" src="icons/circle.png" alt="iconLeft">
+            Title3</h3>
+        <p><img th:src="@{/images/rozdzial3.jpg}" src="images/obraz2.JPG" alt="obraz2">Duis elit sapien, molestie vel efficitur nec, lobortis sit amet mi. Nunc sed mi ac nibh scelerisque bibendum a et mi. Maecenas porttitor rhoncus nisi, a sodales leo accumsan nec. Donec efficitur id leo consequat dignissim. Fusce fermentum posuere nunc eget finibus. Curabitur mollis quam a mollis tempor.ultricies.</p>
+
+    </div>
+    <div class="block4">
+        <h3><img th:src="@{/images/circle.jpg}" src="icons/circle.png" alt="iconRight">Title4</h3>
+        <p><img th:src="@{/images/rozdzial4.jpg}" src="images/obraz3.JPG" alt="obraz3">Proin vulputate, est et commodo feugiat, nibh diam porttitor nibh, sodales consequat magna diam gravida odio. Fusce consectetur metus eu ultricies aliquam. Fusce id libero est. Quisque vitae auctor tortor. Praesent convallis et neque ac pharetra. Nunc blandit luctus ex sed lacinia. </p>
+
+    </div>
+
+
+</section>
+
+<footer>
+    &copy;BG
+    <a href="main.html">About</a>
+    <a href="">Contact</a>
+    <a href="">Cookies</a>
+
+</footer>
+</body></html>

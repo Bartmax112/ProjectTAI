@@ -12,4 +12,9 @@ public class ProfileController {
     public String index(){
         return "profile/index";
     }
+
+    @GetMapping("form")
+    public String form(){
+        return "profile/form";
+    }
 }
