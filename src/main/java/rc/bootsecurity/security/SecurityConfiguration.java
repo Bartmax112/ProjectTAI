@@ -37,15 +37,16 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/api/public/test1").hasAuthority("ACCESS_TEST1")
                 .antMatchers("/api/public/test2").hasAuthority("ACCESS_TEST2")
                 .antMatchers("/api/public/users").permitAll()//hasRole("ADMIN")
-//                .antMatchers("/console/**").permitAll()
+                .antMatchers("/console/**").permitAll()
+//                .antMatchers("/saveCard").permitAll()
                 .and()
                 .formLogin()
                 .loginPage("/login").permitAll()
                 .and()
                 .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/index");
 
-//        http.csrf().disable();
-//        http.headers().frameOptions().disable();
+        http.csrf().disable();
+        http.headers().frameOptions().disable();
     }
 
     @Bean

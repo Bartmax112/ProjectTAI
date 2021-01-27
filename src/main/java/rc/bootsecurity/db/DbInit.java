@@ -34,8 +34,8 @@ public class DbInit implements CommandLineRunner {
         User admin = new User("admin",passwordEncoder.encode("admin123"),"ADMIN","ACCESS_TEST1,ACCESS_TEST2");
         User manager = new User("manager",passwordEncoder.encode("manager123"),"MANAGER","ACCESS_TEST1");
 
-        Card card1 = new Card("Bart Bart", "123456789012", "12/20", "123");
-        Card card2 = new Card("Adam Adam", "321456789012", "12/22", "321");
+        Card card1 = new Card("Bart Bart", "1234567890121234", "12/20", "123");
+        Card card2 = new Card("Adam Adam", "3214567890121234", "12/22", "321");
 
 
         this.cardRepository.save(card1);
@@ -49,9 +49,6 @@ public class DbInit implements CommandLineRunner {
         bart.getCards().add(card2);
 
         this.userRepository.save(bart);
-
-        System.out.println(bart.toStringg());
-        System.out.println(tom.toStringg());
 
         List<User> users = Arrays.asList(dan,tom,admin,manager);
 

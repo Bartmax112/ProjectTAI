@@ -6,6 +6,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import rc.bootsecurity.model.Card;
 import rc.bootsecurity.services.CardService;
@@ -25,6 +27,8 @@ public class ProfileController {
         return "profile/index";
     }
 
+
+
     @GetMapping("form")
     public String form(Model model){
 
@@ -36,11 +40,13 @@ public class ProfileController {
         for(Card card : cardService.getAllCards()){
             if(auth.getName()==card.getUser().getUsername()){
                 tmp.add(card);
-                System.out.println(card.getName());
             }
         }
 
+        Card newCard = new Card();
+
         model.addAttribute("listCards",tmp);
+        model.addAttribute("card", newCard);
         return "profile/form";
     }
 }
