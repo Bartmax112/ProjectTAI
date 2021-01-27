@@ -101,7 +101,7 @@
                         <td>Card number</td>
                         <td>Exp. date</td>
                         <td>CVV</td>
-<!--                        <td></td>-->
+                        <td></td>
                     </tr>
                     <tr th:each="card : ${listCards}">
                         <td th:text="${card.id}"></td>
@@ -109,7 +109,7 @@
                         <td th:text="${card.cardNumber}"></td>
                         <td th:text="${card.expDate}"></td>
                         <td th:text="${card.cvvCode}"></td>
-<!--                        <td><button></button></td>-->
+                        <td><a th:href="@{/deleteCard/{id}(id=${card.id})}">Delete</a></td>
                     </tr>
                 </table>
 
