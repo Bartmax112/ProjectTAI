@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+>
+
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/CSS/login.css" th:href="@{/css/login.css}" rel="stylesheet" type="text/css"/>
+    <link href="../static/CSS/style.css" th:href="@{/css/style.css}" rel="stylesheet" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="JS/gummySlider.js"></script>
+</head>
+
+<body>
+<header>
+    <div class="header">
+        <div class="logo">
+            <h2>Site name</h2>
+            <p>Slogan</p>
+        </div>
+        <div class="contact">
+            <p><img th:src="@{/images/phone.jpg}" src="icons/phone.png" alt="iconPhone">123 456 789</p>
+        </div>
+    </div>
+    <nav>
+        <div class="navHome"><a th:href="@{/index}" href="main">Home</a></div>
+        <div class="navForm"><a th:href="@{~/profile/form}" href="form">Form</a></div>
+        <div class="strona3"><a href="strona3">Link 3</a></div>
+        <div class="navGallery"><a href="gallery">Gallery</a></div>
+        <div class="navLogin"><a th:href="@{~/login}" href="login">Login</a></div>
+    </nav>
+</header>
+
+<div class="javaScript">
+    <div class="slider">
+        <div class="slider-inner">
+            <div class="slide active"><img th:src="@{/images/slider/background1.jpg}" src="images/slider/background1.jpg" alt="zdjecie1"></div>
+            <div class="slide"><img th:src="@{/images/slider/background2.jpg}" src="pictures/slider/background2.jpg" alt="zdjecie2"/></div>
+            <div class="slide"><img th:src="@{/images/slider/background3.jpg}" src="pictures/slider/background3.jpg" alt="zdjecie3"/></div>
+            <div class="slide"><img th:src="@{/images/slider/background4.jpg}" src="pictures/slider/background4.jpg" alt="zdjecie4"/></div>
+            <div class="slide"><img th:src="@{/images/slider/background5.jpg}" src="pictures/slider/background5.jpg" alt="zdjecie5"/></div>
+            <div class="slide"><img th:src="@{/images/slider/background6.jpg}" src="pictures/slider/background6.jpg" alt="zdjecie6"/></div>
+            <div class="slide"><img th:src="@{/images/slider/background7.jpg}" src="pictures/slider/background7.jpeg" alt="zdjecie7"/></div>
+            <div class="slide"><img th:src="@{/images/slider/background8.jpg}" src="pictures/slider/background8.png" alt="zdjecie8"/></div>
+        </div>
+
+        <nav class="slider-nav">
+            <div class="active"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </nav>
+    </div>
+</div>
+<section>
+
+    <div id="divLogin">
+        <h2>WELCOME BACK</h2>
+        <p>Enter your login and password</p>
+        <form name="f" th:action="@{/login}" method="post">
+            <fieldset>
+                <table>
+                    <tr>
+                        <td class="text">Login:</td>
+                        <td><input type="text" id="username" name="username" placeholder="Nick" required title="enter login (at least 4 characters)" value=""><br /></td>
+                    </tr>
+                    <tr>
+                        <td class="text">Password: </td>
+                        <td><input type="password" id="password" name="password" placeholder="Password" required title="enter password(numbers between 6 and 16 digits)"><br /></td>
+                    </tr>
+                </table>
+                <input type="submit">
+                <!--                <button onclick="dodaj()">Submit</button>-->
+                <div style="height: 40px" th:if="${param.error}">
+                    Invalid username and password
+                </div>
+                <div style="height: 40px" th:if="${param.logout}">
+                    You have been logged out
+                </div>
+            </fieldset>
+        </form>
+
+    </div>
+</section>
+
+<footer>
+    &copy;BG
+    <a href="../../resources/static/main.html">About</a>
+    <a href="">Contact</a>
+    <a href="">Cookies</a>
+
+</footer>
+</body></html>

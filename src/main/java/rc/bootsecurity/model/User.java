@@ -1,9 +1,8 @@
 package rc.bootsecurity.model;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import rc.bootsecurity.model.Card;
 
 @Entity
 public class User {
@@ -24,6 +23,10 @@ public class User {
 
     private String permissions = "";
 
+    @OneToMany
+    @JoinColumn(name = "user_id")
+    private Set<Card> cards = new HashSet<>();
+
     public User(String username, String password, String roles, String permissions){
         this.username = username;
         this.password = password;
@@ -33,6 +36,18 @@ public class User {
     }
 
     protected User(){}
+
+    public Set<Card> getCards() {
+        return cards;
+    }
+
+    public void setCards(Set<Card> cards) {
+        this.cards = cards;
+    }
+
+    public void addCard(Card card){
+        this.cards.add(card);
+    }
 
     public long getId() {
         return id;
@@ -70,5 +85,16 @@ public class User {
             return Arrays.asList(this.permissions.split(","));
         }
         return new ArrayList<>();
+    }
+
+    public String toStringg() {
+        return "User{" +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", active=" + active +
+                ", roles='" + roles + '\'' +
+                ", permissions='" + permissions + '\'' +
+                ", cards=" + cards +
+                '}';
     }
 }
