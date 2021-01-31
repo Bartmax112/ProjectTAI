@@ -1,9 +1,9 @@
-package rc.bootsecurity.services;
+package com.bootsecurity.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import rc.bootsecurity.db.CardRepository;
-import rc.bootsecurity.model.Card;
+import com.bootsecurity.db.CardRepository;
+import com.bootsecurity.model.Card;
 
 import java.util.List;
 import java.util.Optional;

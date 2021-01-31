@@ -1,18 +1,14 @@
-package rc.bootsecurity.controller;
+package com.bootsecurity.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import rc.bootsecurity.db.CardRepository;
-import rc.bootsecurity.db.UserRepository;
-import rc.bootsecurity.model.Card;
-import rc.bootsecurity.services.CardService;
-
-import java.util.List;
+import com.bootsecurity.db.UserRepository;
+import com.bootsecurity.model.Card;
+import com.bootsecurity.services.CardService;
 
 @Controller
 public class CardController {

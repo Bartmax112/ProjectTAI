@@ -1,6 +1,6 @@
-package rc.bootsecurity.services;
+package com.bootsecurity.services;
 
-import rc.bootsecurity.model.Card;
+import com.bootsecurity.model.Card;
 
 import java.util.List;
 

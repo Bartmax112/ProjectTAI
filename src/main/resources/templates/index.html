@@ -30,12 +30,12 @@
         <div class="navHome"><a  href="#" th:href="@{/user/index}">Home</a></div>
         <div class="navForm"><a th:href="@{~/profile/form}">Form</a></div>
         <div class="strona3"><a href="strona3">Link 3</a></div>
-        <div class="navGallery"><a href="gallery">Gallery</a></div>
+        <div class="strona4"><a href="strona4">Link 4</a></div>
         <div sec:authorize="isAnonymous()" class="navLogin"><a href="#" th:href="@{~/login}">Login</a></div>
         <div sec:authorize="isAuthenticated()" class="navLogin">
 
             <form form-method="post" th:action="@{/logout}">
-                <button class="navLogin" type="submit">Logout</button>
+                <button id="logoutButton" type="submit">Logout</button>
             </form>
         </div>
     </nav>

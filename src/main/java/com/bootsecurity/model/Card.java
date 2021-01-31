@@ -1,4 +1,4 @@
-package rc.bootsecurity.model;
+package com.bootsecurity.model;
 
 import javax.persistence.*;
 

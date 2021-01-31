@@ -1,11 +1,11 @@
-package rc.bootsecurity.security;
+package com.bootsecurity.security;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import rc.bootsecurity.db.UserRepository;
-import rc.bootsecurity.model.User;
+import com.bootsecurity.db.UserRepository;
+import com.bootsecurity.model.User;
 
 @Service
 public class UserPrincipalDetailsService implements UserDetailsService {

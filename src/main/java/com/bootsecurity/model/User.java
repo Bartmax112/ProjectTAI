@@ -1,8 +1,7 @@
-package rc.bootsecurity.model;
+package com.bootsecurity.model;
 
 import javax.persistence.*;
 import java.util.*;
-import rc.bootsecurity.model.Card;
 
 @Entity
 public class User {
