@@ -16,7 +16,7 @@ public class CardController {
     @Autowired
     private CardService cardService;
 
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     public CardController(UserRepository userRepository) {
         this.userRepository = userRepository;
@@ -28,7 +28,6 @@ public class CardController {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 
         card.setUser(userRepository.findByUsername(auth.getName()));
-        card.toString();
         cardService.saveCard(card);
         return "redirect:/profile/form";
     }

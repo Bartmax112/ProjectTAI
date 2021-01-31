@@ -36,7 +36,7 @@ public class ProfileController {
         List<Card> tmp = new ArrayList<>();
 
         for(Card card : cardService.getAllCards()){
-            if(auth.getName()==card.getUser().getUsername()){
+            if(auth.getName().equals(card.getUser().getUsername())){
                 tmp.add(card);
             }
         }

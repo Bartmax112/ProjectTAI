@@ -9,7 +9,7 @@ import com.bootsecurity.model.User;
 
 @Service
 public class UserPrincipalDetailsService implements UserDetailsService {
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     public UserPrincipalDetailsService(UserRepository userRepository) {
         this.userRepository = userRepository;
@@ -19,8 +19,6 @@ public class UserPrincipalDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         User user = this.userRepository.findByUsername(s);
-        UserPrincipal userPrincipal = new UserPrincipal(user);
-
-        return userPrincipal;
+        return new UserPrincipal(user);
     }
 }

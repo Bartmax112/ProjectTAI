@@ -6,7 +6,6 @@ import com.bootsecurity.db.CardRepository;
 import com.bootsecurity.model.Card;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class CardServiceImpl implements CardService{
@@ -22,18 +21,6 @@ public class CardServiceImpl implements CardService{
     @Override
     public void saveCard(Card card) {
         this.cardRepository.save(card);
-    }
-
-    @Override
-    public Card getCardById(Long id) {
-        Optional<Card> optional = cardRepository.findById(id);
-        Card employee = null;
-        if (optional.isPresent()) {
-            employee = optional.get();
-        } else {
-            throw new RuntimeException(" Card not found for id :: " + id);
-        }
-        return employee;
     }
 
     @Override

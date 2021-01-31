@@ -8,9 +8,9 @@ import com.bootsecurity.model.User;
 
 @Service
 public class DbInit implements CommandLineRunner {
-    private UserRepository userRepository;
-    private PasswordEncoder passwordEncoder;
-    private CardRepository cardRepository;
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
+    private final CardRepository cardRepository;
 
     public DbInit(UserRepository userRepository, PasswordEncoder passwordEncoder, CardRepository cardRepository) {
         this.userRepository = userRepository;
@@ -19,7 +19,7 @@ public class DbInit implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception{
+    public void run(String... args) {
         this.userRepository.deleteAll();
         this.cardRepository.deleteAll();
 
